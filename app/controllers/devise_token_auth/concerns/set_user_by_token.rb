@@ -4,11 +4,9 @@ module DeviseTokenAuth::Concerns::SetUserByToken
   extend ActiveSupport::Concern
   include DeviseTokenAuth::Concerns::ResourceFinder
 
-  # a comment
-
   included do
     before_action :set_request_start
-    before_action :set_user_by_token
+    # before_action :set_user_by_token
     after_action :update_auth_header
   end
 
